@@ -1,3 +1,8 @@
+Reorganiztion transitions from [FlipMove by joshwcomeau](https://github.com/joshwcomeau/react-flip-move).
+
+## Run Locally
+Once cloned, run `npm install` at the project directory level to install required dependencies. If FlipMove doesn't import during this, run `npm i -S react-flip-move` or simply `yarn add react-flip-move` if using yarn.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
