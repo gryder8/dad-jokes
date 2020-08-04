@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./JokeList.css";
+import './transition.css"'
 import Joke from "./Joke";
 import ReactCSSTransitionGroup from 'react-transition-group';
 import { v4 as uuidv4 } from "uuid";
