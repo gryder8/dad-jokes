@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./JokeList.css";
 import Joke from "./Joke";
+import ReactCSSTransitionGroup from 'react-transition-group';
 import { v4 as uuidv4 } from "uuid";
 
 export default class JokeList extends Component {
@@ -17,7 +18,8 @@ export default class JokeList extends Component {
     };
     this.seenJokes = new Set(this.state.jokes.map((j) => j.text));
     console.log(this.seenJokes);
-    this.handleClick = this.handleClick.bind(this);
+    this.handleJokeFetch = this.handleJokeFetch.bind(this);
+    this.handleLocalStateClear = this.handleLocalStateClear.bind(this);
   }
 
   componentDidMount() {
@@ -27,8 +29,13 @@ export default class JokeList extends Component {
     }
   }
 
-  handleClick() {
+  handleJokeFetch() {
     this.setState({ loading: true }, this.getJokes); //second arg is a callback (called after state is set)
+  }
+
+  handleLocalStateClear() {
+    window.localStorage.clear();
+    window.location.reload(true);
   }
 
   async getJokes() {
@@ -92,9 +99,13 @@ export default class JokeList extends Component {
           <h1 className="JokeList-title">
             <span>Dad</span> Jokes
           </h1>
-          <img src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg" />
-          <button className="JokeList-getmore" onClick={this.handleClick}>
+          <img src="https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg" alt="crying_laughing_emoji"/>
+          <button className="JokeList-getmore" onClick={this.handleJokeFetch}>
             Fetch Jokes
+          </button>
+
+          <button className="JokeList-clearlocal" onClick={this.handleLocalStateClear}>
+            Reset Jokes
           </button>
         </div>
         <div className="JokeList-jokes">
