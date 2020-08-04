@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./JokeList.css";
-import './Transition.css"'
+import "./Transition.css";
 import Joke from "./Joke";
-import ReactCSSTransitionGroup from 'react-transition-group';
+import FlipMove from 'react-flip-move';
 import { v4 as uuidv4 } from "uuid";
 
 export default class JokeList extends Component {
@@ -110,6 +110,7 @@ export default class JokeList extends Component {
           </button>
         </div>
         <div className="JokeList-jokes">
+          <FlipMove>
           {jokes.map((j) => (
             <Joke
               key={j.id}
@@ -119,6 +120,7 @@ export default class JokeList extends Component {
               downvote={() => this.handleVote(j.id, -1)}
             />
           ))}
+          </FlipMove>
         </div>
       </div>
     );

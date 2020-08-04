@@ -9,8 +9,8 @@
     "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-flip-move": "^3.0.4",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1",
     "uuid": "^8.3.0"
   },
   "scripts": {
