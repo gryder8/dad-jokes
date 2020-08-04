@@ -40,6 +40,44 @@
   transition: all 0.3s;
 }
 
+.fa-arrow-up:hover {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color: #FF8b60;
+}
+
+@keyframes move-up {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+.fa-arrow-down:hover {
+  animation-name: move-down;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color:#9494FF;
+}
+
+@keyframes move-down {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
+
 .Joke-smiley {
   font-size: 3rem;
   margin-left: auto;
