@@ -87,7 +87,7 @@ export default class JokeList extends Component {
       return (
         <div className="JokeList-spinner">
           <i className="far fa-8x fa-laugh fa-spin" />
-          <h1 className="JokeList-title">Loading...</h1>
+          <h1 className="loading-text">Loading...</h1>
         </div>
       );
     }
