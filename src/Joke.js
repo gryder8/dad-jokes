@@ -14,7 +14,7 @@ export default class Joke extends Component {
     } else if (this.props.votes >= 3) {
       return "#FFC107";
     } else if (this.props.votes >= 0) {
-      return "#FF9800";
+      return "#d2d2d2";
     } else if (this.props.votes >= -5) {
       return "#f44336";
     } else {
